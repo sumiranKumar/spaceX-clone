@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.img1 {
+  background-image: url(Axiom_4_vertical_sunset_060725_DSC_5498_bbe27a54bd.jpg);
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.downarrow {
+  position: absolute;
+  bottom: 0;
+  margin-left: 50%;
+  margin-bottom: 2%;
+  animation: arrowdown 3s infinite ease;
+}
+@keyframes arrowdown {
+  0% {
+    top: 100%;
+  }
+  50% {
+    bottom: 20px;
+  }
+}
+
+.main_nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 23px;
+  padding: 36px;
+  font-size: 15px;
+
+  /* flex-wrap: wrap; */
+}
+
+.main_nav .first_nav svg {
+  width: 213px;
+  filter: invert(1);
+  padding-left: 40px;
+}
+.main_nav .second_nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 23px;
+  padding-right: 130px;
+  font-size: 13px;
+  font-weight: 200;
+  font-family: "Poppins", Arial, Verdana, sans-serif;
+}
+
+.main_nav .second_nav ul a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+.main_nav .second_nav ul a::after{
+    content: '';
+    position: absolute;
+     left: 0;
+      bottom: 0;
+      width: 0;
+    
+  
+    height: 1px;
+ 
+    background-color: white;
+    transition: width 0.3s ease-in-out ;
+    transition-behavior: normal ;
+    
+}
+.main_nav .second_nav ul a:hover:after{
+  width: 100%;
+
+  
+}
+
+
+
+
+
+.main_nav .third_nav ul {
+  display: flex;
+  list-style: none;
+  color: white;
+  font-weight: bolder;
+  gap: 23px;
+}
+
+.main_head {
+  position: absolute;
+  bottom: 0;
+  margin-left: 110px;
+  margin-bottom: 130px;
+  color: white;
+}
+
+.main_head .firsthead {
+  font-size: 17px;
+  margin-bottom: 4px;
+  font-family: "Poppins", Arial, Verdana, sans-serif;
+}
+.main_head .secondhead {
+  font-size: 22px;
+  margin-bottom: 23px;
+
+  font-weight: 700;
+  font-family: "Poppins", Arial, Verdana, sans-serif;
+}
+
+.button span {
+  display: flex;
+  justify-content: center;
+  border: 2px solid white;
+  font-size: 15px;
+  width: 130px;
+  padding: 14px;
+  font-family: "Poppins", Arial, Verdana, sans-serif;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button {
+  margin-top: 5px;
+}
+
+.button span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+  height: 0;
+  transition: 0.3s;
+
+  background-color: rgb(255, 255, 255);
+  z-index: -1;
+}
+
+.button span:hover {
+  color: black;
+}
+.button span:hover::before {
+  height: 100%;
+}
+
+.img2 {
+  background-image: url(2ndpic.jpg);
+}
+
+.img3 {
+  background-image: url(3rd.jpg);
+}
+
+.img4 {
+  background-image: url(4th.jpg);
+}
+.img5 {
+  background-image: url(5th.jpg);
+}
+.img6 {
+  background-image: url(6th.jpg);
+}
+
+@media screen and (max-width: 1070px) {
+  .main_nav .second_nav ul {
+    display: none;
+  }
+  .main_nav .third_nav li {
+    display: none;
+  }
+  .main_nav .first_nav {
+    margin: auto;
+  }
+
+  .main_head {
+    margin: 7%;
+    padding-bottom: 20%;
+  }
+
+  .main_head .secondhead {
+    font-size: 15px;
+  }
+  .second_nav {
+    position: absolute;
+    top: 60px;    /* height of navbar */
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .second_nav.open {
+    max-height: 700px;  /* enough for all items */
+  }
+}
+
+.img2 .mainimg2head {
+  position: absolute;
+  bottom: 0;
+  font-weight: bolder;
+  font-family: "Poppins", Arial, Verdana, sans-serif;
+  margin-left: 110px;
+  margin-bottom: 130px;
+  color: white;
+}
+
+.button {
+  margin-top: 2.6rem;
+}
+
+.prp {
+  height: 10vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  gap: 46px;
+  align-items: center;
+  font-size: 13px;
+  font-family: "Poppins", Arial, Verdana, sans-serif;
+}
+.prp p {
+  color: rgb(212, 212, 212);
+}
+.prp a {
+  color: rgb(217, 216, 216);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.prp a:hover {
+  color: rgb(113, 111, 111);
+}
+
+

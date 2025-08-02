@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three‑Line Nav</title>
+  <style>/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 0.75rem 1rem;
+}
+
+/* Hamburger icon */
+.ham {
+  display: inline-block;
+  cursor: pointer;
+}
+.ham span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #fff;
+  transition: transform .1s ease, opacity .1s ease;
+}
+
+/* Menu (hidden by default on small screens) */
+.nav {
+  list-style: none;
+  display: flex;
+}
+.nav li {
+  margin-left: 1rem;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 60px;    /* height of navbar */
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nav.open {
+    max-height: 300px;  /* enough for all items */
+  }
+}
+</style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="ham" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav" id="nav-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Grab elements
+const hamburger = document.getElementById('hamburger');
+const navMenu   = document.getElementById('nav-menu');
+
+// Toggle menu open/close on click
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+
+  // Optional: Animate the hamburger into an “X”
+  hamburger.classList.toggle('active');
+});
+
+  </script>
+</body>
+</html>
